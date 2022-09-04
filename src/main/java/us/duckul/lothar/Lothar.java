@@ -53,4 +53,9 @@ public class Lothar {
         return fullName;
     }
 
+    public class LotharFactory {
+      public static Lothar createLothar() {
+          return new Lothar("Lothar von Factory");
+      }
+    }
 }
