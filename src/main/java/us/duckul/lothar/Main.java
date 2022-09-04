@@ -6,9 +6,7 @@ public class Main {
 
     public static void main(String[] args) {
         PrintStream printStream = System.out;
-        Lothar lothar = Lothar.newInstance();
-
-
+        Lothar lothar = Lothar.LotharFactory.createLothar();
 
         if (args.length == 0) {
             printStream.println("Welcome to lothar-cli. Choose one of the following commands: \n" +

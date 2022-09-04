@@ -15,14 +15,6 @@ public class Lothar {
         this("Lothar von Trotha");
     }
 
-    public static Lothar newInstance() {
-        return new Lothar();
-    }
-
-    public static Lothar newInstance(String fullName) {
-        return new Lothar(fullName);
-    }
-
     public static String getSisterName() {
         return "Clara";
     }
@@ -53,4 +45,13 @@ public class Lothar {
         return fullName;
     }
 
+    public class LotharFactory {
+      public static Lothar createLothar() {
+          return new Lothar();
+      }
+      
+      public static Lothar createLothar(String fullName) {
+          return new Lothar(fullName);
+      }
+    }
 }
