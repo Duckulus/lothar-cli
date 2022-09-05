@@ -15,10 +15,20 @@ dependencies {
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.8.1")
 }
 
+val mainClass : String by properties
+
 application {
     mainClass.set("us.duckul.lothar.Main")
 }
 
-tasks.getByName<Test>("test") {
-    useJUnitPlatform()
+tasks {
+    jar {
+        manifest {
+            attributes["Main-Class"] = mainClass
+        }
+    }
+
+    getByName<Test>("test") {
+        useJUnitPlatform()
+    }
 }
