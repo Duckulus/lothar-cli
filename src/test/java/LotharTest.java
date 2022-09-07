@@ -15,7 +15,7 @@ public class LotharTest {
     public void testFullName() {
         String fullName = "Lothar";
         Lothar lothar = Lothar.LotharFactory.createLothar(fullName);
-        assert Objects.equals(lothar.getFullName(), "Lothar");
+        assert Objects.equals(lothar.getFullName(), fullName);
     }
 
     @Test
